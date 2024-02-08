@@ -1,0 +1,103 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#timer {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.game-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 800px;
+}
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 16px;
+    padding: 20px;
+    border-top: 2px solid #000; /* Üstüne siyah çizgi çeker */
+}
+
+.text-block {
+    width: 500px; /* Sabit bir geniþlik */
+    margin: 10px auto; /* Merkezde düzgün bir þekilde hizalamak için */
+    text-align: center;
+}
+
+
+.text {
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+    font-size: 24px;
+}
+
+.voteButton {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.aiButton {
+    background-color: #007bff;
+}
+
+.humanButton {
+    background-color: #28a745;
+}
+
+.voteButton:hover {
+    opacity: 0.8;
+}
+
+.result {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Önceki CSS kurallarýný koruyun ve aþaðýdaki kurallarý ekleyin */
+
+#startButton {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 30px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#startButton:hover {
+    background-color: #218838;
+}
+
+#timer {
+    font-size: 36px; /* Puntolarý büyüt */
+    font-weight: bold;
+    color: #000; /* Baþlangýçta siyah renk */
+    margin-top: 20px;
+}
