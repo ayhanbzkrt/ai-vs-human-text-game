@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +26,7 @@
             font-size: 20px;
             font-weight: bold;
             padding: 15px 30px;
-            background-color: #ffc107; /* Sarı renk */
+            background-color: #ffc107; /* SarÃ½ renk */
             color: black; /* Metin rengi siyah */
             border: none;
             border-radius: 5px;
@@ -95,21 +95,21 @@
 </head>
 <body>
     <div class="header">
-        <h1>Yapay Zeka mı İnsan mı?</h1>
-        <button id="startButton">Başlat</button>
+        <h1>Yapay Zeka mÃ½ Ãnsan mÃ½?</h1>
+        <button id="startButton">BaÃ¾lat</button>
         <div id="timer">60</div>
     </div>
     <div class="game-container">
         <div id="textBlock1" class="text-block">
-            <p id="text1" class="text">Karanlık kütüphanede, Zef'in parmakları eski bir büyü kitabının sayfalarında gezinirken, sessizlik aniden yırtıldı. Formülleri fısıldarken, kitabın sayfaları aydınlık bir mavi ile parladı ve bilgece bir hışırtıyla kütüphanenin gizemli köşelerine kaçan sayfalar arasında kayboldu. Zef, bilginin derinliklerine yolculuğuna başlamıştı</p>
+            <p id="text1" class="text">KaranlÃ½k kÃ¼tÃ¼phanede, Zef'in parmaklarÃ½ eski bir bÃ¼yÃ¼ kitabÃ½nÃ½n sayfalarÃ½nda gezinirken, sessizlik aniden yÃ½rtÃ½ldÃ½. FormÃ¼lleri fÃ½sÃ½ldarken, kitabÃ½n sayfalarÃ½ aydÃ½nlÃ½k bir mavi ile parladÃ½ ve bilgece bir hÃ½Ã¾Ã½rtÃ½yla kÃ¼tÃ¼phanenin gizemli kÃ¶Ã¾elerine kaÃ§an sayfalar arasÃ½nda kayboldu. Zef, bilginin derinliklerine yolculuÃ°una baÃ¾lamÃ½Ã¾tÃ½</p>
             <button class="voteButton aiButton" onclick="vote(1, 'AI')">AI</button>
-            <button class="voteButton humanButton" onclick="vote(1, 'Human')">İnsan</button>
+            <button class="voteButton humanButton" onclick="vote(1, 'Human')">Ãnsan</button>
             <div id="result1" class="result"></div>
         </div>
         <div id="textBlock2" class="text-block">
-            <p id="text2" class="text">Sabah ışıkları perdenin arasından Ayhan'ın yüzüne vurmaya başlayınca yataktan fırladı. Aceleyle üstünü giyinip yüzünü yıkadıktan sonra evden çıkmaya hazırlanırken bir ses duydu. Kafasını çevirip salona baktığında bir robot koltuğa oturmuş onu izliyordu..</p>
+            <p id="text2" class="text">Sabah Ã½Ã¾Ã½klarÃ½ perdenin arasÃ½ndan Ayhan'Ã½n yÃ¼zÃ¼ne vurmaya baÃ¾layÃ½nca yataktan fÃ½rladÃ½. Aceleyle Ã¼stÃ¼nÃ¼ giyinip yÃ¼zÃ¼nÃ¼ yÃ½kadÃ½ktan sonra evden Ã§Ã½kmaya hazÃ½rlanÃ½rken bir ses duydu. KafasÃ½nÃ½ Ã§evirip salona baktÃ½Ã°Ã½nda bir robot koltuÃ°a oturmuÃ¾ onu izliyordu..</p>
             <button class="voteButton aiButton" onclick="vote(2, 'AI')">AI</button>
-            <button class="voteButton humanButton" onclick="vote(2, 'Human')">İnsan</button>
+            <button class="voteButton humanButton" onclick="vote(2, 'Human')">Ãnsan</button>
             <div id="result2" class="result"></div>
         </div>
     </div>
@@ -119,14 +119,14 @@
         let voteCounts = { 1: { AI: 0, Human: 0 }, 2: { AI: 0, Human: 0 } };
 
         document.getElementById('startButton').addEventListener('click', function() {
-            this.disabled = true; // Başlat butonunu devre dışı bırak
+            this.disabled = true; // BaÃ¾lat butonunu devre dÃ½Ã¾Ã½ bÃ½rak
             startTimer(60);
-            // Oylama işlevselliğini ve metinleri burada başlatın
+            // Oylama iÃ¾levselliÃ°ini ve metinleri burada baÃ¾latÃ½n
         });
 
         function startTimer(duration) {
             let timer = duration;
-            const beep = new Audio('bip.mp3'); // Bip ses dosyası yolu
+            const beep = new Audio('bip.mp3'); // Bip ses dosyasÃ½ yolu
             document.getElementById('timer').textContent = timer;
             countdown = setInterval(function() {
                 timer--;
@@ -134,30 +134,30 @@
                 beep.play();
 
                 if (timer <= 5) {
-                    document.getElementById('timer').style.color = "#ff0000"; // Son 5 saniye için kırmızı renk
+                    document.getElementById('timer').style.color = "#ff0000"; // Son 5 saniye iÃ§in kÃ½rmÃ½zÃ½ renk
                     document.getElementById('timer').textContent = "Acele edin! " + timer;
                 }
 
                 if (timer <= 0) {
                     clearInterval(countdown);
-                    document.getElementById('startButton').disabled = false; // Butonu tekrar etkinleştir
+                    document.getElementById('startButton').disabled = false; // Butonu tekrar etkinleÃ¾tir
                     beep.pause();
                     alert("Zaman doldu!");
-                    // Oylama sonuçlarını göster
+                    // Oylama sonuÃ§larÃ½nÃ½ gÃ¶ster
                 }
             }, 1000);
         }
 
         function vote(textId, choice) {
-            // Oy kaydetme ve sonuçları güncelleme mantığı
-            // Örneğin, voteCounts[textId][choice]++; gibi
-            // Sonuçları hesapla ve göster
+            // Oy kaydetme ve sonuÃ§larÃ½ gÃ¼ncelleme mantÃ½Ã°Ã½
+            // Ã–rneÃ°in, voteCounts[textId][choice]++; gibi
+            // SonuÃ§larÃ½ hesapla ve gÃ¶ster
         }
     </script>
     <div class="footer">
-        Rami Kütüphanesi |  Kütüphane ve Teknoloji Festivali | “Üretken Yapay Zeka: Kütüphanecilerin Yükselişi (L’AI’brarian)”<br>
+        Rami KÃ¼tÃ¼phanesi |  KÃ¼tÃ¼phane ve Teknoloji Festivali | â€œÃœretken Yapay Zeka: KÃ¼tÃ¼phanecilerin YÃ¼kseliÃ¾i (Lâ€™AIâ€™brarian)â€<br>
         Ayhan BOZKURT<br>
-        Cumhurbaşkanlığı Millet Kütüphanesi<br>
+        CumhurbaÃ¾kanlÃ½Ã°Ã½ Millet KÃ¼tÃ¼phanesi<br>
         <a href="https://twitter.com/bzkrtayhan">@bzkrtayhan</a> Twitter<br>
         <a href="https://www.linkedin.com/in/ayhanbozkurt/">LinkedIn</a><br>
         <a href="https://medium.com/@ayhanbzkrt">Medium</a>
