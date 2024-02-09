@@ -9,24 +9,6 @@ body, html {
     align-items: center;
     background-color: #f0f0f0;
 }
-
-.header {
-    text-align: center;
-    margin: 20px 0;
-}
-
-#timer {
-    margin-top: 20px;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.game-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 800px;
-}
 .footer {
     text-align: center;
     margin-top: 30px;
@@ -35,19 +17,69 @@ body, html {
     border-top: 2px solid #000; /* Üstüne siyah çizgi çeker */
 }
 
-.text-block {
-    width: 500px; /* Sabit bir geniþlik */
-    margin: 10px auto; /* Merkezde düzgün bir þekilde hizalamak için */
+
+.header {
     text-align: center;
+    margin: 20px 0;
 }
 
+#startButton {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 30px;
+    background-color: #ffc107; /* Sarı renk */
+    color: black; /* Metin rengi siyah */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; /* Butonu blok elementi yap */
+}
+
+#startButton:disabled {
+    background-color: #ccc; /* Devre dışı buton rengi */
+    cursor: not-allowed;
+}
+
+#pinArea {
+    margin-bottom: 20px;
+}
+
+#pinInput {
+    padding: 10px;
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+#pinSubmit {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.game-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 800px;
+}
+
+.text-block {
+    width: 45%;
+    margin: 10px;
+    text-align: center;
+}
 
 .text {
     margin: 10px 0;
     padding: 20px;
     background-color: #e9e9e9;
     border-radius: 5px;
-    font-size: 24px;
+    font-size: 18px; /* Metin boyutunu ayarla */
 }
 
 .voteButton {
@@ -77,27 +109,3 @@ body, html {
     font-size: 16px;
 }
 
-/* Önceki CSS kurallarýný koruyun ve aþaðýdaki kurallarý ekleyin */
-
-#startButton {
-    font-size: 20px;
-    font-weight: bold;
-    padding: 15px 30px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#startButton:hover {
-    background-color: #218838;
-}
-
-#timer {
-    font-size: 36px; /* Puntolarý büyüt */
-    font-weight: bold;
-    color: #000; /* Baþlangýçta siyah renk */
-    margin-top: 20px;
-}
