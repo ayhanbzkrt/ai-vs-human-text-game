@@ -4,99 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI vs Human Text Game</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #f0f0f0;
-        }
-
-        .header {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        #startButton {
-            font-size: 20px;
-            font-weight: bold;
-            padding: 15px 30px;
-            background-color: #ffc107; /* Sarı renk */
-            color: black; /* Metin rengi siyah */
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        #startButton:hover {
-            background-color: #e0a800;
-        }
-
-        #timer {
-            font-size: 36px;
-            font-weight: bold;
-            color: #000;
-            margin-top: 20px;
-        }
-
-        .game-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            max-width: 800px;
-        }
-
-        .text-block {
-            width: 45%;
-            margin: 10px;
-            text-align: center;
-        }
-
-        .text {
-            margin: 10px 0;
-            padding: 20px;
-            background-color: #e9e9e9;
-            border-radius: 5px;
-        }
-
-        .voteButton {
-            padding: 10px 20px;
-            margin: 5px;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .aiButton {
-            background-color: #007bff;
-        }
-
-        .humanButton {
-            background-color: #28a745;
-        }
-
-        .voteButton:hover {
-            opacity: 0.8;
-        }
-
-        .result {
-            margin-top: 10px;
-            font-size: 16px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="header">
         <h1>Yapay Zeka mı İnsan mı?</h1>
-        <button id="startButton">Başlat</button>
+        <!-- PIN alanı eklendi -->
+        <div id="pinArea">
+            <input type="password" id="pinInput" placeholder="PIN" />
+            <button id="pinSubmit">PIN Doğrula</button>
+        </div>
+        <button id="startButton" disabled>Başlat</button>
         <div id="timer">60</div>
     </div>
     <div class="game-container">
@@ -114,46 +32,8 @@
         </div>
     </div>
 
-    <script>
-        let countdown;
-        let voteCounts = { 1: { AI: 0, Human: 0 }, 2: { AI: 0, Human: 0 } };
+    <script src="script.js"></script>
 
-        document.getElementById('startButton').addEventListener('click', function() {
-            this.disabled = true; // Başlat butonunu devre dışı bırak
-            startTimer(60);
-            // Oylama işlevselliğini ve metinleri burada başlatın
-        });
-
-        function startTimer(duration) {
-            let timer = duration;
-            const beep = new Audio('bip.mp3'); // Bip ses dosyası yolu
-            document.getElementById('timer').textContent = timer;
-            countdown = setInterval(function() {
-                timer--;
-                document.getElementById('timer').textContent = timer;
-                beep.play();
-
-                if (timer <= 5) {
-                    document.getElementById('timer').style.color = "#ff0000"; // Son 5 saniye için kırmızı renk
-                    document.getElementById('timer').textContent = "Acele edin! " + timer;
-                }
-
-                if (timer <= 0) {
-                    clearInterval(countdown);
-                    document.getElementById('startButton').disabled = false; // Butonu tekrar etkinleştir
-                    beep.pause();
-                    alert("Zaman doldu!");
-                    // Oylama sonuçlarını göster
-                }
-            }, 1000);
-        }
-
-        function vote(textId, choice) {
-            // Oy kaydetme ve sonuçları güncelleme mantığı
-            // Örneğin, voteCounts[textId][choice]++; gibi
-            // Sonuçları hesapla ve göster
-        }
-    </script>
     <div class="footer">
         Rami Kütüphanesi |  Kütüphane ve Teknoloji Festivali | “Üretken Yapay Zeka: Kütüphanecilerin Yükselişi (L’AI’brarian)”<br>
         Ayhan BOZKURT<br>
@@ -162,8 +42,8 @@
         <a href="https://www.linkedin.com/in/ayhanbozkurt/">LinkedIn</a><br>
         <a href="https://medium.com/@ayhanbzkrt">Medium</a>
     </div>
-  
 </body>
 </html>
+
 
 
