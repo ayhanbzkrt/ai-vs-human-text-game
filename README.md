@@ -25,4 +25,4 @@ Projeye katkıda bulunmak istiyorsanız, lütfen şu adımları takip edin:
 ## Lisans
 Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
 
-## İ
+##by Ayhan Bozkurt
