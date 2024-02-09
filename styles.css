@@ -32,12 +32,12 @@ body, html {
     margin-top: 30px;
     font-size: 16px;
     padding: 20px;
-    border-top: 2px solid #000; /* Üstüne siyah çizgi çeker */
+    border-top: 2px solid #000; /* ÃœstÃ¼ne siyah Ã§izgi Ã§eker */
 }
 
 .text-block {
-    width: 500px; /* Sabit bir genişlik */
-    margin: 10px auto; /* Merkezde düzgün bir şekilde hizalamak için */
+    width: 500px; /* Sabit bir geniÃ¾lik */
+    margin: 10px auto; /* Merkezde dÃ¼zgÃ¼n bir Ã¾ekilde hizalamak iÃ§in */
     text-align: center;
 }
 
@@ -77,7 +77,7 @@ body, html {
     font-size: 16px;
 }
 
-/* Önceki CSS kurallarını koruyun ve aşağıdaki kuralları ekleyin */
+/* Ã–nceki CSS kurallarÃ½nÃ½ koruyun ve aÃ¾aÃ°Ã½daki kurallarÃ½ ekleyin */
 
 #startButton {
     font-size: 20px;
@@ -96,8 +96,8 @@ body, html {
 }
 
 #timer {
-    font-size: 36px; /* Puntoları büyüt */
+    font-size: 36px; /* PuntolarÃ½ bÃ¼yÃ¼t */
     font-weight: bold;
-    color: #000; /* Başlangıçta siyah renk */
+    color: #000; /* BaÃ¾langÃ½Ã§ta siyah renk */
     margin-top: 20px;
 }
