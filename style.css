@@ -1,0 +1,109 @@
+﻿body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 16px;
+    padding: 20px;
+    border-top: 2px solid #000; /* Üstüne siyah çizgi çeker */
+}
+
+.header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#startButton {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 30px;
+    background-color: #ffc107; /* Sarı renk */
+    color: black; /* Metin rengi siyah */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; /* Butonu blok elementi yap */
+}
+
+#startButton:disabled {
+    background-color: #ccc; /* Devre dışı buton rengi */
+    cursor: not-allowed;
+}
+
+#pinArea {
+    margin-bottom: 20px;
+}
+
+#pinInput {
+    padding: 10px;
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+#pinSubmit {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.game-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 800px;
+}
+
+.text-block {
+    width: 45%;
+    margin: 10px;
+    text-align: center;
+}
+
+.text {
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+    font-size: 18px; /* Metin boyutunu ayarla */
+}
+
+.voteButton {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.aiButton {
+    background-color: #007bff;
+}
+
+.humanButton {
+    background-color: #28a745;
+}
+
+.voteButton:hover {
+    opacity: 0.8;
+}
+
+.result {
+    margin-top: 10px;
+    font-size: 16px;
+}

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI vs Human Text Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Yapay Zeka mı İnsan mı?</h1>
+        <!-- PIN alanı eklendi -->
+        <div id="pinArea">
+            <input type="password" id="pinInput" placeholder="PIN" />
+            <button id="pinSubmit">PIN Doğrula</button>
+        </div>
+        <button id="startButton" disabled>Başlat</button>
+        <div id="timer">60</div>
+    </div>
+    <div class="game-container">
+        <div id="textBlock1" class="text-block">
+            <p id="text1" class="text">Karanlık kütüphanede, Zef'in parmakları eski bir büyü kitabının sayfalarında gezinirken, sessizlik aniden yırtıldı. Formülleri fısıldarken, kitabın sayfaları aydınlık bir mavi ile parladı ve bilgece bir hışırtıyla kütüphanenin gizemli köşelerine kaçan sayfalar arasında kayboldu. Zef, bilginin derinliklerine yolculuğuna başlamıştı</p>
+            <button class="voteButton aiButton" onclick="vote(1, 'AI')">AI</button>
+            <button class="voteButton humanButton" onclick="vote(1, 'Human')">İnsan</button>
+            <div id="result1" class="result"></div>
+        </div>
+        <div id="textBlock2" class="text-block">
+            <p id="text2" class="text">Sabah ışıkları perdenin arasından Ayhan'ın yüzüne vurmaya başlayınca yataktan fırladı. Aceleyle üstünü giyinip yüzünü yıkadıktan sonra evden çıkmaya hazırlanırken bir ses duydu. Kafasını çevirip salona baktığında bir robot koltuğa oturmuş onu izliyordu..</p>
+            <button class="voteButton aiButton" onclick="vote(2, 'AI')">AI</button>
+            <button class="voteButton humanButton" onclick="vote(2, 'Human')">İnsan</button>
+            <div id="result2" class="result"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <div class="footer">
+        Rami Kütüphanesi |  Kütüphane ve Teknoloji Festivali | “Üretken Yapay Zeka: Kütüphanecilerin Yükselişi (L’AI’brarian)”<br>
+        Ayhan BOZKURT<br>
+        Cumhurbaşkanlığı Millet Kütüphanesi<br>
+        <a href="https://twitter.com/bzkrtayhan">@bzkrtayhan</a> Twitter<br>
+        <a href="https://www.linkedin.com/in/ayhanbozkurt/">LinkedIn</a><br>
+        <a href="https://medium.com/@ayhanbzkrt">Medium</a>
+    </div>
+</body>
+</html>
